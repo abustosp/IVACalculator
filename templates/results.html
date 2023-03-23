@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de IVA - Resultados</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+		}
+		h1 {
+			color: #4caf50;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+		p {
+			color: #555;
+			font-size: 18px;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		table {
+			margin: 0 auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+			max-width: 100%;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+			border-radius: 5px;
+			overflow: hidden;
+			font-size: 16px;
+			line-height: 22px;
+			text-align: left;
+		}
+
+		table tr:hover {
+    background-color: #f5f5f5;
+		}
+
+		th, td {
+			padding: 8px 16px;
+			border: 1px solid #ddd;
+			text-align: left;
+		}
+		th {
+			background-color: #4caf50;
+			color: #fff;
+			font-weight: bold;
+			text-align: center;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculadora de IVA - Resultados</h1>
+	<p>A continuación se muestran los resultados de las liquidaciones</p>
+	{% if resultados %}
+		{{ resultados|safe }}
+	{% else %}
+		<p>No results found.</p>
+	{% endif %}
+</body>
+</html>
