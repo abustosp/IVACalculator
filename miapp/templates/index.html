@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IVA</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1F1F1;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #4caf50;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3E8E41;
+        }
+    </style>
+</head>
+<body>
+	<h1>Calculadora de IVA</h1>
+	<p>Por favor ingrese la ruta a la carpeta donde se encuentran los archivos:</p>
+	<form action="/process_files" method="POST">
+		<label for="folder_path">Ruta de la carpeta (comprobantes):</label>
+        <input id="folder_path" name="folder_path" type="text">
+
+        <label for="file_saldos">Archivo de Saldos:</label>
+		<input id="file_saldos" name="file_saldos" type="file">
+
+		<br><br>
+		<input type="submit" value="Process Files">
+	</form>
+</body>
+</html>
